@@ -21,12 +21,12 @@ use function trim;
  * @author  Ignace Nyamagana Butera <nyamsprod@gmail.com>
  * @since   5.0.0
  */
-enum Bounds
+enum Bounds: string
 {
-    case IncludeStartExcludeEnd;
-    case IncludeAll;
-    case ExcludeStartIncludeEnd;
-    case ExcludeAll;
+    case IncludeStartExcludeEnd = 'IncludeStartExcludeEnd';
+    case IncludeAll = 'IncludeAll';
+    case ExcludeStartIncludeEnd = 'ExcludeStartIncludeEnd';
+    case ExcludeAll = 'ExcludeAll';
 
     private const REGEXP_ISO80000 = '/^(?<lower>\[|\()(?<start>[^,\]\)\[\(]*),(?<end>[^,\]\)\[\(]*)(?<upper>\]|\))$/';
     private const REGEXP_BOURBAKI = '/^(?<lower>\[|\])(?<start>[^,\]\[]*),(?<end>[^,\]\[]*)(?<upper>\[|\])$/';
